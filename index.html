@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelBloom</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('./assets/cityBG.jpg');
+            background-size: cover;
+        }
+        .navbar {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #575757;
+        }
+        .navbar .nav-links {
+            display: flex;
+            gap: 15px;
+        }
+        .home-icon {
+            margin-right: 20%;
+        }
+        .navbar .nav-links {
+            margin-right: 5px;
+        }
+        .search-container {
+            position: absolute;
+            right: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .search-container input[type="text"] {
+            padding: 7px 90px 7px 30px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            width: 250px;
+        }
+        .search-container input[type="text"]::placeholder {
+            color: #888;
+        }
+        .search-container .search-icon {
+            position: absolute;
+            margin-left: 5px;
+            color: #888;
+            pointer-events: none;
+        }
+        .search-container .buttons-container {
+            display: flex;
+            position: absolute;
+            right: 3px;
+            gap: 5px;
+        }
+        .search-container .buttons-container button {
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .search-container .buttons-container button:hover {
+            background-color: #0056b3;
+        }
+        .suggestions-container {
+            position: absolute;
+            right: 20px;
+            top: 50px;
+            max-height: 35vh;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            z-index: 1000;
+        }
+        .suggestion-item {
+            padding: 10px;
+            cursor: pointer;
+        }
+        .suggestion-item:hover {
+            background-color: #f0f0f0;
+        }
+        .content {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            margin-left: 20px;
+            padding: 20px;
+            justify-content: center;
+        }
+        .content .social-icons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-right: 20px; /* Espacio entre los íconos y la descripción */
+        }
+        .content .social-icons a {
+            color: #333;
+            font-size: 24px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .content .social-icons a:hover {
+            color: #007bff;
+        }
+        .content h1 {
+            font-size: 4.5em;
+            color: #ffffff;
+            margin-bottom: 10px;
+            margin-left: 2%;
+        }
+        .content p {
+            font-size: 1.2em;
+            color: #ffffff;
+            max-width: 600px;
+        }
+        .sub-content {
+            display: flex;
+            flex-direction: row;
+        }
+        .suggestions-container {
+            margin-top: 20px;
+        }
+        .suggestion-item {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .suggestion-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        .suggestion-item .description {
+            margin: 10px 0;
+        }
+        .suggestion-item .view-button {
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .suggestion-item .view-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <span class="home-icon"><img src="./assets/travelBloomLogo.png" alt="page logo"></span>
+        <div class="nav-links">
+            <a href="./index.html">Home</a>
+            <a href="./About_Us.html">About Us</a>
+            <a href="./Contact_Us.html">Contact Us</a>
+        </div>
+        <div class="search-container">
+            <span class="search-icon">&#128269;</span>
+            <input type="text" id="search-input" placeholder="Enter a destination or keyword">
+            <div class="buttons-container">
+                <button type="button" id="search-button">Search</button>
+                <button type="button" id="clear-button">Clear</button>
+            </div>
+            <div id="suggestions-container" class="suggestions-container"></div>
+        </div>
+    </div>
+    <div class="content">
+        <h1>EXPLORE <br> DREAM <br> DESTINATION</h1>
+        <div class="sub-content">
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook">&#xf09a;</a>
+                <a href="#" aria-label="Twitter">&#xf099;</a>
+                <a href="#" aria-label="Instagram">&#xf16d;</a>
+                <a href="#" aria-label="LinkedIn">&#xf08c;</a>
+            </div>
+            <p>It encourages exploration of unfamiliar territories, embracing diverse cultures and landscapes, while pursuing the desired destination that captivates the heart and ignites a sense of wonder.</p>
+        </div>
+    </div>
+    <script src="./travel_recommendation.js"></script>
+</body>
+</html>

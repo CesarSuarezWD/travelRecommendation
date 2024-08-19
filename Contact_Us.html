@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelBloom</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('./assets/cityBG.jpg');
+            background-size: cover;
+        }
+        .navbar {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #575757;
+        }
+        .navbar .nav-links {
+            display: flex;
+            gap: 15px;
+        }
+        .home-icon {
+            margin-right: 20%;
+        }
+        .navbar .nav-links {
+            margin-right: 5px;
+        }
+        .search-container {
+            position: absolute;
+            right: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .search-container input[type="text"] {
+            padding: 7px 90px 7px 30px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            width: 250px;
+        }
+        .search-container input[type="text"]::placeholder {
+            color: #888;
+        }
+        .search-container .search-icon {
+            position: absolute;
+            margin-left: 5px;
+            color: #888;
+            pointer-events: none;
+        }
+        .search-container .buttons-container {
+            display: flex;
+            position: absolute;
+            right: 3px;
+            gap: 5px;
+        }
+        .search-container .buttons-container button {
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .search-container .buttons-container button:hover {
+            background-color: #0056b3;
+        }
+        .content {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            margin-left: 20px;
+            padding: 20px;
+            justify-content: center;
+        }
+        .socialnetwork-icon {
+            width: 2vw;
+        }
+        .content-aboutus .socialnetwork-icons-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-right: 20px;
+            padding: 2vw;
+        }
+        .content-aboutus .socialnetwork-icons-container a {
+            color: #333;
+            font-size: 24px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .content-aboutus .socialnetwork-icons-container a:hover {
+            color: #007bff;
+        }
+        .content-aboutus h1 {
+            font-size: 3em;
+            color: #ffffff;
+            margin-bottom: 10px;
+            margin-left: 8%;
+        }
+        .content-aboutus p {
+            font-size: 0.8em;
+            color: #ffffff;
+            max-width: 600px;
+            backdrop-filter: blur( 4px );
+            -webkit-backdrop-filter: blur( 4px );
+            padding: 1vw 1vh;
+        }
+        .sub-content-1 {
+            display: flex;
+            flex-direction: column;
+            margin-left: 8%;
+        }
+        .sub-content-2 {
+            display: flex;
+            flex-direction: row;
+        }
+        .contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 93%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <span class="home-icon"><img src="./assets/travelBloomLogo.png" alt="page logo"></span>
+        <div class="nav-links">
+            <a href="./index.html">
+                Home
+            </a>
+            <a href="./About_Us.html">About Us</a>
+            <a href="./Contact_Us.html">Contact Us</a>
+        </div>
+    </div>
+    <div class="content-aboutus">
+        <div class="sub-content-1">
+            <h1>CONTACT US</h1>
+            <div class="sub-content-2">            
+                <div class="socialnetwork-icons-container">
+                    <a href="#" aria-label="Redit"><img src="./assets/reddit.png" class="socialnetwork-icon" alt="redit logo"></a>
+                    <a href="#" aria-label="LinkedIn"><img src="./assets/linkedin.png" class="socialnetwork-icon" alt="LinkedIn logo"></a>
+                    <a href="#" aria-label="Pinterest"><img src="./assets/pinterest.png" class="socialnetwork-icon" alt="Pinterest logo"></a>
+                    <a href="#" aria-label="BeHance"><img src="./assets/behance.png" class="socialnetwork-icon" alt="BeHance logo"></a>
+                </div>
+                <p>Get in touch!</p>
+                <div class="contact-form">
+                    <form action="#" method="post">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+            
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+            
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+            
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
